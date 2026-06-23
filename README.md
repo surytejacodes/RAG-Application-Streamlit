@@ -34,18 +34,36 @@ The application allows users to upload PDF and TXT documents, create a searchabl
 The IAM user requires access to Amazon Bedrock:
 
 {
-  "Version":"2012-10-17",
-  "Statement":[
-    {
-      "Effect":"Allow",
-      "Action":[
-        "bedrock:InvokeModel",
-        "bedrock:InvokeModelWithResponseStream"
-      ],
-      "Resource":"*"
-    }
-  ]
+  "Version":"2012-10-17", </br>
+  "Statement":[ </br>
+    { </br>
+      "Effect":"Allow", </br>
+      "Action":[ </br>
+        "bedrock:InvokeModel", </br>
+        "bedrock:InvokeModelWithResponseStream" </br>
+      ], </br>
+      "Resource":"*" </br>
+    } </br>
+  ] </br>
 }
+
+**How to run**
+- Create Virtual Environment: </br>
+    python -m venv venv </br>
+
+- Activate Virtual Environment: </br>
+Windows:</br>
+venv\Scripts\activate</br>
+Linux/Mac:</br>
+source venv/bin/activate
+
+- Install Dependencies:</br>
+pip install -r requirements.txt
+
+- Final Run:</br>
+streamlit run app.py </br>
+or</br>
+python -m streamlit run app.py
 
 
 **Example Workflow**
